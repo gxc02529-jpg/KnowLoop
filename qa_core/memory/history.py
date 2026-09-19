@@ -303,4 +303,3 @@ def format_messages(messages: Iterable[BaseMessage]) -> str:
         else:
             parts.append(f"{message.type}：{message.content}")
     return "\n".join(parts)
-

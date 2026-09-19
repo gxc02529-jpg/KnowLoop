@@ -185,5 +185,3 @@ class QAService:
             user_role=user_role,
             user_roles=user_roles,
         )
-
-

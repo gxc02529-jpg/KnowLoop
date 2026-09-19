@@ -438,5 +438,3 @@ def list_ingestion_reports(*, scenario_id: str | None = None, limit: int = 20) -
         if len(reports) >= limit:
             break
     return reports
-
-

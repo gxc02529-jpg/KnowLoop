@@ -121,4 +121,3 @@ def refresh_llm_runtime_status() -> dict[str, Any]:
             }
         )
     return llm_runtime_status()
-

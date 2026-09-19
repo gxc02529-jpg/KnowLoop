@@ -174,5 +174,3 @@ def split_documents(documents: list[Document]) -> tuple[list[Document], list[str
                 chunks.append(Document(page_content=child_doc.page_content, metadata=metadata))
                 ids.append(chunk_id)
     return chunks, ids
-
-

@@ -72,4 +72,3 @@ def rewrite_query_if_needed(query: str, history_messages, should_rewrite: bool) 
     if not rewritten:
         raise RuntimeError("查询改写返回空结果，无法生成独立检索问题。")
     return rewritten
-

@@ -477,4 +477,3 @@ def load_file(path: Path) -> list[Document]:
     logger.debug("Loading document with %s: %s", spec.description, path)
     loader = spec.create_loader(path)
     return loader.load()
-

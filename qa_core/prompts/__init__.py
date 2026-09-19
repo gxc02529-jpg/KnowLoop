@@ -8,4 +8,3 @@
 
 调用方典型用法：from qa_core.prompts import build_answer_prompt_profile
 """
-

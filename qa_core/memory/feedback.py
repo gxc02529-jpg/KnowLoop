@@ -163,4 +163,3 @@ def get_feedback_store() -> FeedbackStore:
     调用顺序：API 层 -> get_feedback_store()。
     """
     return FeedbackStore()
-

@@ -1,5 +1,6 @@
 .git
 .claude/
+.workbuddy/
 .idea
 .vscode/
 __pycache__/

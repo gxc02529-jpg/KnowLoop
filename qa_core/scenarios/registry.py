@@ -363,4 +363,3 @@ def resolve_scenario(scenario_id: str | None = None) -> ScenarioDefinition:
     调用顺序：场景解析入口 -> resolve_scenario()。
     """
     return get_scenario_registry().resolve(scenario_id)
-

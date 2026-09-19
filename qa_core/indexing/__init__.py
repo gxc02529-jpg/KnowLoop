@@ -16,4 +16,3 @@
 - qa_core.governance：数据域隔离、知识库版本管理。
 - qa_core.retrieval.factory：Milvus/FAISS 存储工厂。
 """
-

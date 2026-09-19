@@ -197,4 +197,3 @@ def _context_source_label(metadata: dict[str, Any]) -> str:
     调用顺序：QAService/RAG 管线 -> _context_source_label()。
     """
     return format_source_label(metadata)
-

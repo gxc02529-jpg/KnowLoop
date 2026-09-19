@@ -94,4 +94,3 @@ def build_source_expr(
 
     # 没有任何过滤约束时返回 None，而非空字符串 ""，调用方可通过 None 判断是否需要剪枝
     return " and ".join(clauses) if clauses else None
-

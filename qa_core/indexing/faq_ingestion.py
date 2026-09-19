@@ -182,4 +182,3 @@ def ingest_faq_csv(
     version_store.record_ingest_result(active_kb_version, content_type="faq", count=len(docs))
     logger.info("Ingested %s FAQ records from %s, kb_version: %s", len(docs), csv_path, active_kb_version)
     return len(docs)
-

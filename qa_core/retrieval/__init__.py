@@ -12,4 +12,3 @@
 
 调用方典型用法：from qa_core.retrieval.factory import get_faq_store, get_doc_store
 """
-

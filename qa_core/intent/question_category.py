@@ -60,4 +60,3 @@ def is_table_query(query: str) -> bool:
     normalized = query.strip().lower()
     # 命中任意关键词即判定为表格类查询，后续链路据此调整检索策略和后处理逻辑
     return bool(TABLE_QUERY_HINTS.search(normalized))
-

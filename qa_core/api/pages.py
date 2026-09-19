@@ -151,6 +151,8 @@ def read_docs(full_path: str = ""):
     调用顺序：FastAPI 路由层 -> read_docs()。
     """
     docs_dir = Path("site")
+    if not (docs_dir / "index.html").is_file():
+        return RedirectResponse(url="/api/docs", status_code=307)
     if not full_path or full_path.endswith("/"):
         full_path = os.path.join(full_path, "index.html")
     elif not full_path.endswith(".html") and "." not in Path(full_path).suffix:

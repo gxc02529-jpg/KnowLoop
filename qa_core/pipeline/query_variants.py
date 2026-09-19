@@ -173,4 +173,3 @@ def _replace_term(query: str, old: str, new: str, rule: QueryVariantReplacementR
     if not rule.ignore_case:
         return query.replace(old, new)
     return re.sub(re.escape(old), new, query, flags=re.IGNORECASE)
-

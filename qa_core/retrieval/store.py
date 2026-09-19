@@ -667,6 +667,3 @@ class MilvusHybridStore:
             reranker=get_reranker(),
             top_n=self.settings.rerank_top_n,
         )
-
-
-

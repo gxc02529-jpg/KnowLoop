@@ -572,6 +572,3 @@ def ingest_directory(
         active_kb_version,
     )
     return stats.total_chunks
-
-
-

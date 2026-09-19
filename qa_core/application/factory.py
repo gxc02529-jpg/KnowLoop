@@ -38,4 +38,3 @@ def get_qa_service() -> QAService:
     # 首次调用会触发 QAService.__init__() 初始化历史记录适配器等共享依赖
     # 后续调用直接从缓存返回，避免重复创建数据库连接等重操作
     return QAService()
-

@@ -117,4 +117,3 @@ def test_promote_bad_cases_appends_new_case_without_dry_run(tmp_path: Path) -> N
     assert plan["dry_run"] is True
     assert plan["stats"] == {"inserted": 1, "replaced": 0, "skipped": 0}
     assert not target_path.exists()
-

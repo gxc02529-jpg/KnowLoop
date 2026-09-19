@@ -62,4 +62,3 @@ def get_logger(name: str = "MultiScenarioRAG") -> logging.Logger:
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)
     return logger
-

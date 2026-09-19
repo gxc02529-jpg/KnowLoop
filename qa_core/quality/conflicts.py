@@ -243,4 +243,3 @@ def detect_faq_document_conflicts(faq_csv: str | Path, chunks: list[Document], *
         "issue_counts": dict(summary),
         "items": conflicts[:limit],
     }
-

@@ -7,4 +7,3 @@
 
 调用方典型用法：from qa_core.scenarios.registry import resolve_scenario
 """
-
