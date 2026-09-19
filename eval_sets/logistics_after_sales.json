@@ -1,0 +1,6 @@
+[
+  {"case_id":"logistics_tracking_faq","scenario_id":"logistics_after_sales","source_filter":"tracking","tenant_id":"default","dataset_id":"default","visibility":"public","user_role":"public","query":"物流轨迹长期未更新怎么办？","expected_hit_type":"faq_direct","expected_keywords":["运单号","轨迹时间","工单","不能"],"expected_source_contains":["物流轨迹长期未更新"]},
+  {"case_id":"logistics_damage_faq","scenario_id":"logistics_after_sales","source_filter":"claims","tenant_id":"default","dataset_id":"default","visibility":"public","user_role":"public","query":"包裹破损申请理赔需要哪些材料？","expected_hit_type":"faq_direct","expected_keywords":["外包装照片","破损照片","价值证明","审核"],"expected_source_contains":["包裹破损申请理赔"]},
+  {"case_id":"logistics_claim_boundary","scenario_id":"logistics_after_sales","source_filter":"claims","tenant_id":"default","dataset_id":"default","visibility":"public","user_role":"public","query":"可以直接承诺全额赔付吗？","expected_hit_type":"faq_direct","expected_keywords":["不可以","合同","责任认定","人工审核"],"expected_source_contains":["可以直接承诺全额赔付"]},
+  {"case_id":"logistics_returns_doc","scenario_id":"logistics_after_sales","source_filter":"returns","tenant_id":"default","dataset_id":"default","visibility":"public","user_role":"public","query":"退件改址和商家退款分别由谁确认，哪些情况不能承诺结果？","expected_keywords":["授权","人工工单","商家","不能"],"expected_source_contains":["return_policy.md"]}
+]

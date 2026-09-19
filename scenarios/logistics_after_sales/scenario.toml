@@ -1,0 +1,23 @@
+scenario_id = "logistics_after_sales"
+display_name = "KnowLoop 物流售后知识助手（合成演示）"
+industry = "物流售后"
+description = "合成演示政策，仅用于验证物流异常、破损理赔和退件知识问答；不查询真实运单、不执行退款。"
+assistant_name = "KnowLoop"
+business_domain = "物流运输异常、签收争议、破损理赔与退件规则知识问答（合成演示政策）"
+support_contact = "演示工单队列（不连接真实客服）"
+faq_collection = "knowloop_logistics_faq_v1"
+doc_collection = "knowloop_logistics_doc_v1"
+valid_sources = ["tracking", "claims", "returns"]
+sample_questions = ["物流轨迹长期未更新怎么办？", "包裹破损申请理赔需要哪些材料？", "退件地址可以直接修改吗？"]
+resume_project_name = "KnowLoop 物流售后问答与知识治理"
+resume_keywords = ["物流售后", "FAQ", "混合检索", "知识版本", "多租户"]
+
+[source_labels]
+tracking = "轨迹与签收"
+claims = "破损与理赔"
+returns = "退件与改址"
+
+[source_patterns]
+tracking = "轨迹|物流|运单|延误|签收|未收到|运输异常"
+claims = "破损|理赔|赔付|价值证明|少件|外包装|开箱"
+returns = "退件|退回|改址|修改地址|拒收|拦截"
