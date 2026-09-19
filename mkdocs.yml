@@ -1,0 +1,5 @@
+site_name: KnowLoop
+docs_dir: docs
+site_dir: site
+nav:
+  - 项目说明: index.md
