@@ -1,0 +1,24 @@
+name: Public regression suite
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  isolated-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install isolated-test dependencies
+        run: >-
+          python -m pip install pytest fastapi httpx pydantic-settings sqlalchemy
+          langchain-core langchain-community redis pymysql jieba tomli
+      - name: Run public regression suite
+        run: >-
+          python -m pytest -q tests/test_logistics_scenario.py
+          tests/test_memory_history.py tests/test_answer_confidence.py
+          tests/test_api_protection.py
