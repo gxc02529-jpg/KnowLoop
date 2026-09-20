@@ -4,7 +4,6 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Python](https://img.shields.io/badge/python-3.12-blue)
 
-
 企业智能化解决方案团队基于统一 RAG 交付底座，为物流售后场景完成的脱敏参考实现。项目复用 FastAPI、LangChain、Milvus 混合检索、FAQ 直出、多租户范围与知识版本治理能力，通过 `logistics_after_sales` 行业模块把轨迹异常、破损理赔、退件改址组织成可检索知识。
 
 本仓库是公开开发版本。物流资料、FAQ 与评测问题均为自建合成样例，不代表真实承运商政策；没有接入真实运单、退款或赔付系统，也没有附带生产效果数据。
