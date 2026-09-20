@@ -14,9 +14,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Dependabot now groups only Python minor and patch updates. Major version
-  bumps arrive as individual pull requests so each migration gets its own
-  review instead of being buried in an unreviewable batch.
 - Dependabot no longer proposes `requirements.txt` changes for this repository.
   CI installs a curated dependency subset rather than `requirements.txt`, so an
   automated dependency bump would always look green while never being actually
