@@ -1,14 +1,26 @@
 version: 2
 updates:
+  # 只把 minor/patch 打包成一个 PR：风险低、可一次性验证。
+  # major 升级刻意不分组，逐个提 PR，强制走一次显式迁移评审。
   - package-ecosystem: pip
     directory: "/"
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
     groups:
-      python-dependencies:
+      python-minor-patch:
         patterns:
           - "*"
+        update-types:
+          - minor
+          - patch
+    # requirements.txt 是 v1.0.11 冻结快照的依赖集。major 升级会让
+    # V1_RELEASE_MANIFEST.json 里的验收结论静默失效，必须人工迁移并重跑
+    # release gates，不接受自动 PR。
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-major
 
   - package-ecosystem: github-actions
     directory: "/"
