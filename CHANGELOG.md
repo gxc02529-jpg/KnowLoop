@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - MIT license, `.editorconfig`, and Dependabot configuration.
 - Contributing guide, changelog, and GitHub issue / pull request templates.
-
 ### Changed
 
 - Dependabot now groups only Python minor and patch updates. Major version
@@ -22,16 +21,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   major cascade would silently invalidate the release evidence recorded in
   `V1_RELEASE_MANIFEST.json`, so majors need a deliberate migration.
 - Bumped `actions/checkout` to v7 and `actions/setup-python` to v7.
-
-
 - CI now cancels superseded runs before starting a new one, and byte-compiles
   sources before running the tests.
-
 ## [0.1.0] - 2026-09-19
 
 ### Added
 
 - Initial public reference implementation.
-
 Release and versioning policy: see [VERSIONING.md](VERSIONING.md).
-
