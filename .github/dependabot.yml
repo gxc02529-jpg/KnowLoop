@@ -1,27 +1,22 @@
 version: 2
 updates:
-  # 只把 minor/patch 打包成一个 PR：风险低、可一次性验证。
-  # major 升级刻意不分组，逐个提 PR，强制走一次显式迁移评审。
+  # 本仓库的 CI 只安装一份手挑依赖清单，不安装 requirements.txt，
+  # 因此任何 requirements.txt 的自动升级都不会被 CI 发现 —— 是"假绿"。
+  # 又因 requirements.txt 是 v1.0.11 冻结快照的依赖集
+  # （V1_RELEASE_MANIFEST.json 的验收结论基于这套 pin），
+  # 且 semver 在此并不可靠（torch 2.7.1→2.14.0、docling 2.106→2.128
+  # 都只是 minor），故对 pip 关闭自动升级。
+  # 依赖升级按 VERSIONING.md 的节奏人工迁移并重跑 release gates。
   - package-ecosystem: pip
     directory: "/"
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
-    groups:
-      python-minor-patch:
-        patterns:
-          - "*"
-        update-types:
-          - minor
-          - patch
-    # requirements.txt 是 v1.0.11 冻结快照的依赖集。major 升级会让
-    # V1_RELEASE_MANIFEST.json 里的验收结论静默失效，必须人工迁移并重跑
-    # release gates，不接受自动 PR。
     ignore:
       - dependency-name: "*"
-        update-types:
-          - version-update:semver-major
 
+  # github-actions 保留自动升级：CI 会真实执行被升级的 action，
+  # 版本是否可用由流水线直接证明。
   - package-ecosystem: github-actions
     directory: "/"
     schedule:

@@ -17,10 +17,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dependabot now groups only Python minor and patch updates. Major version
   bumps arrive as individual pull requests so each migration gets its own
   review instead of being buried in an unreviewable batch.
-- Dependabot ignores major Python dependency updates. `requirements.txt` is the
-  pinned dependency set of the frozen v1.0.11 platform snapshot; a 41-package
-  major cascade would silently invalidate the release evidence recorded in
-  `V1_RELEASE_MANIFEST.json`, so majors need a deliberate migration.
+- Dependabot no longer proposes `requirements.txt` changes for this repository.
+  CI installs a curated dependency subset rather than `requirements.txt`, so an
+  automated dependency bump would always look green while never being actually
+  exercised. `requirements.txt` is also the pinned dependency set behind the
+  frozen v1.0.11 release evidence, and semantic versioning is unreliable here
+  (`torch` 2.7.1 to 2.14.0 and `docling` 2.106.0 to 2.128.0 are both minor
+  bumps). Dependency upgrades go through a deliberate migration with the release
+  gates re-run, following [VERSIONING.md](VERSIONING.md). `github-actions`
+  updates stay automated because CI exercises the upgraded actions directly.
 - Bumped `actions/checkout` to v7 and `actions/setup-python` to v7.
 - CI now cancels superseded runs before starting a new one, and byte-compiles
   sources before running the tests.
