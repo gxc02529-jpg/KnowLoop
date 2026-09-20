@@ -38,3 +38,51 @@ jobs:
           python -m pytest -q tests/test_logistics_scenario.py
           tests/test_memory_history.py tests/test_answer_confidence.py
           tests/test_api_protection.py
+
+  dependency-check:
+    # 上面的 isolated-tests 只安装一份手挑依赖子集，并不执行 requirements.txt，
+    # 所以 requirements.txt 的变更在那边永远是绿的。本作业专门补上这块可观测性：
+    # 真正去解析 requirements.txt，让「能不能装上、彼此是否冲突」成为 CI 可证明的事实。
+    name: dependency resolution and audit
+    runs-on: ubuntu-latest
+    # 全量元数据解析（torch/docling/paddleocr 这类重量级包）比单测慢得多，
+    # 25 分钟会被砍在半路从而给出假阴性，这里放宽到 45 分钟。
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      - name: Resolve requirements.txt
+        run: >-
+          python -m pip install --dry-run --report pip-report.json
+          -r requirements.txt
+
+      - name: Report resolved distribution count
+        run: >-
+          python -c "import json; r = json.load(open('pip-report.json'));
+          print('resolved distributions:', len(r['install']))"
+
+      # 漏洞扫描先以报告形式接入，不阻断构建；基线清零后可改为 --fail-on HIGH 作为卡口。
+      - name: Audit pinned dependencies against OSV
+        continue-on-error: true
+        run: >-
+          python scripts/security/scan_dependencies.py
+          --json reports/security/osv.json | tee osv-summary.md
+
+      - name: Publish audit summary
+        if: always()
+        continue-on-error: true
+        run: |
+          {
+            echo "### Dependency audit"
+            echo
+            cat osv-summary.md
+          } >> "$GITHUB_STEP_SUMMARY"

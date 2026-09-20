@@ -20,6 +20,10 @@ reports/
 site/
 docs/archive/
 
+# 依赖解析与漏洞审计产物（ci.yml 的 dependency-check 作业会生成）
+pip-report.json
+osv-summary.md
+
 # 本地大模型和向量库/数据库卷
 models/
 volumes/
