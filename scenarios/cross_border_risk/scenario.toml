@@ -9,8 +9,8 @@ faq_collection = "cross_border_risk_faq_hybrid_v1"
 doc_collection = "cross_border_risk_doc_hybrid_v1"
 valid_sources = ["customs", "sanction", "payment", "logistics", "documentation"]
 sample_questions = ["申报要素缺失会有什么风险？", "交易对手命中制裁名单怎么办？", "信用证不符点如何处理？"]
-resume_project_name = "跨境贸易风控 RAG 知识问答平台"
-resume_keywords = ["跨境贸易", "供应链风控", "贸易合规", "信用证审单", "海关申报", "RAG"]
+project_name = "跨境贸易风控 RAG 知识问答平台"
+keywords = ["跨境贸易", "供应链风控", "贸易合规", "信用证审单", "海关申报", "RAG"]
 
 [source_labels]
 customs = "海关申报"

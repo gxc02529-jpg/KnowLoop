@@ -9,8 +9,8 @@ faq_collection = "compliance_faq_hybrid_v1"
 doc_collection = "compliance_doc_hybrid_v1"
 valid_sources = ["contract", "audit", "privacy"]
 sample_questions = ["合同审批需要哪些材料？", "哪些数据属于敏感个人信息？", "审计抽查缺材料怎么办？"]
-resume_project_name = "企业合规制度智能问答系统"
-resume_keywords = ["合规知识库", "合同审查", "审计问答", "隐私保护", "引用溯源"]
+project_name = "企业合规制度智能问答系统"
+keywords = ["合规知识库", "合同审查", "审计问答", "隐私保护", "引用溯源"]
 
 [source_labels]
 contract = "合同审查"

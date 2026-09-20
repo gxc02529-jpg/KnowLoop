@@ -9,8 +9,8 @@ faq_collection = "engineering_project_qa_faq_hybrid_v1"
 doc_collection = "engineering_project_qa_doc_hybrid_v1"
 valid_sources = ["drawing", "specification", "schedule", "quality", "safety"]
 sample_questions = ["图纸变更后旧版本还能作为施工依据吗？", "施工规范和图纸冲突时以哪个为准？", "隐蔽工程验收需要哪些资料？"]
-resume_project_name = "工程项目资料与施工规范 RAG 问答助手"
-resume_keywords = ["工程资料", "施工规范", "图纸版本", "质量验收", "多版本检索", "RAG"]
+project_name = "工程项目资料与施工规范 RAG 问答助手"
+keywords = ["工程资料", "施工规范", "图纸版本", "质量验收", "多版本检索", "RAG"]
 
 [source_labels]
 drawing = "设计图纸"

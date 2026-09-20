@@ -9,8 +9,8 @@ faq_collection = "equipment_faq_hybrid_v1"
 doc_collection = "equipment_doc_hybrid_v1"
 valid_sources = ["inspection", "alarm", "safety"]
 sample_questions = ["设备日检需要检查哪些项目？", "温度告警如何处理？", "维修前为什么要上锁挂牌？"]
-resume_project_name = "制造业设备运维知识助手"
-resume_keywords = ["制造业", "设备运维", "故障排查", "SOP", "RAG"]
+project_name = "制造业设备运维知识助手"
+keywords = ["制造业", "设备运维", "故障排查", "SOP", "RAG"]
 
 [source_labels]
 inspection = "巡检标准"

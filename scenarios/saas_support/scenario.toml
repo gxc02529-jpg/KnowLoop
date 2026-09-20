@@ -9,8 +9,8 @@ faq_collection = "saas_faq_hybrid_v1"
 doc_collection = "saas_doc_hybrid_v1"
 valid_sources = ["account", "billing", "integration"]
 sample_questions = ["如何重置管理员密码？", "发票什么时候可以开？", "Webhook 调用失败怎么排查？"]
-resume_project_name = "SaaS 客服知识库智能助手"
-resume_keywords = ["SaaS客服", "产品文档问答", "工单降本", "FAQ直出", "混合检索"]
+project_name = "SaaS 客服知识库智能助手"
+keywords = ["SaaS客服", "产品文档问答", "工单降本", "FAQ直出", "混合检索"]
 
 [source_labels]
 account = "账号登录"

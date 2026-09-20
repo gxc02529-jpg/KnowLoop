@@ -9,8 +9,8 @@ faq_collection = "insurance_claims_faq_hybrid_v1"
 doc_collection = "insurance_claims_doc_hybrid_v1"
 valid_sources = ["policy", "claim_material", "exclusion", "liability", "settlement"]
 sample_questions = ["理赔申请需要哪些材料？", "哪些情况可能属于除外责任？", "赔付金额可以直接承诺吗？"]
-resume_project_name = "保险理赔材料审核与 RAG 知识问答助手"
-resume_keywords = ["保险理赔", "材料审核", "责任认定", "除外责任", "赔付结算", "RAG"]
+project_name = "保险理赔材料审核与 RAG 知识问答助手"
+keywords = ["保险理赔", "材料审核", "责任认定", "除外责任", "赔付结算", "RAG"]
 
 [source_labels]
 policy = "保单条款"

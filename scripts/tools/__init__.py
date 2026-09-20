@@ -7,7 +7,7 @@
 #   capacity_estimate.py          — 知识库容量与参数压力估算
 #     - 基于当前场景资料和配置，估算不同规模下的 chunk 数、向量存储体积、
 #       rerank 候选数量和 prompt 上下文字符量
-#     - 用于回答面试中常见的"1 万/10 万 chunk 后怎么优化"问题
+#     - 用于评估生产规模下的容量瓶颈与扩容边界
 #
 #   check_local_runtime.py        — 本地运行环境诊断
 #     - 检查 Docker/WSL、Milvus/MySQL/API 端口连通性

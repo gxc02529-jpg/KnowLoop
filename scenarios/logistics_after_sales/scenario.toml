@@ -9,8 +9,8 @@ faq_collection = "knowloop_logistics_faq_v1"
 doc_collection = "knowloop_logistics_doc_v1"
 valid_sources = ["tracking", "claims", "returns"]
 sample_questions = ["物流轨迹长期未更新怎么办？", "包裹破损申请理赔需要哪些材料？", "退件地址可以直接修改吗？"]
-resume_project_name = "KnowLoop 物流售后问答与知识治理"
-resume_keywords = ["物流售后", "FAQ", "混合检索", "知识版本", "多租户"]
+project_name = "KnowLoop 物流售后问答与知识治理"
+keywords = ["物流售后", "FAQ", "混合检索", "知识版本", "多租户"]
 
 [source_labels]
 tracking = "轨迹与签收"

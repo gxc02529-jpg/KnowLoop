@@ -1,8 +1,8 @@
 """知识库容量与参数压力估算。
 
 这个脚本不访问 Milvus，也不调用 LLM。它基于当前场景资料和配置，估算不同知识库规模下
-的 chunk 数、向量存储体积、rerank 候选数量和 prompt 上下文字符量，用于回答面试里常见
-的“1 万/10 万 chunk 后怎么优化”的问题。
+的 chunk 数、向量存储体积、rerank 候选数量和 prompt 上下文字符量，用于评估生产规模下的
+容量瓶颈与扩容边界。
 """
 
 from __future__ import annotations

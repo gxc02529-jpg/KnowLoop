@@ -75,8 +75,8 @@ class ScenarioDefinition:
     source_labels: dict[str, str] = field(default_factory=dict)
     source_patterns: dict[str, str] = field(default_factory=dict)
     sample_questions: list[str] = field(default_factory=list)
-    resume_project_name: str = ""
-    resume_keywords: list[str] = field(default_factory=list)
+    project_name: str = ""
+    keywords: list[str] = field(default_factory=list)
 
     @classmethod
     def from_mapping(cls, payload: dict[str, Any], *, base_dir: Path | None = None) -> "ScenarioDefinition":
@@ -140,8 +140,8 @@ class ScenarioDefinition:
             source_labels={str(k): str(v) for k, v in dict(payload.get("source_labels", {})).items()},
             source_patterns={str(k): str(v) for k, v in dict(payload.get("source_patterns", {})).items()},
             sample_questions=[str(item) for item in payload.get("sample_questions", [])],
-            resume_project_name=str(payload.get("resume_project_name") or payload.get("display_name") or scenario_id),
-            resume_keywords=[str(item) for item in payload.get("resume_keywords", [])],
+            project_name=str(payload.get("project_name") or payload.get("display_name") or scenario_id),
+            keywords=[str(item) for item in payload.get("keywords", [])],
         )
 
     def compiled_source_patterns(self) -> dict[str, re.Pattern[str]]:
@@ -217,8 +217,8 @@ class ScenarioDefinition:
             "support_contact": self.support_contact,
             "source_options": self.source_options(),
             "sample_questions": self.sample_questions,
-            "resume_project_name": self.resume_project_name,
-            "resume_keywords": self.resume_keywords,
+            "project_name": self.project_name,
+            "keywords": self.keywords,
         }
         if include_internal:
             payload.update(

@@ -9,8 +9,8 @@ faq_collection = "tender_contract_risk_faq_hybrid_v1"
 doc_collection = "tender_contract_risk_doc_hybrid_v1"
 valid_sources = ["bidding", "contract", "delivery", "acceptance", "risk"]
 sample_questions = ["投标文件缺少授权书有什么风险？", "非标准付款条款需要谁复核？", "验收材料不完整怎么办？"]
-resume_project_name = "招投标合规与合同履约 RAG 风控平台"
-resume_keywords = ["招投标", "合同履约", "招采合规", "验收风险", "RAG", "风控问答"]
+project_name = "招投标合规与合同履约 RAG 风控平台"
+keywords = ["招投标", "合同履约", "招采合规", "验收风险", "RAG", "风控问答"]
 
 [source_labels]
 bidding = "招投标合规"
