@@ -1,5 +1,10 @@
 # KnowLoop
 
+![CI](https://github.com/gxc02529-jpg/KnowLoop/actions/workflows/ci.yml/badge.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python](https://img.shields.io/badge/python-3.12-blue)
+
+
 企业智能化解决方案团队基于统一 RAG 交付底座，为物流售后场景完成的脱敏参考实现。项目复用 FastAPI、LangChain、Milvus 混合检索、FAQ 直出、多租户范围与知识版本治理能力，通过 `logistics_after_sales` 行业模块把轨迹异常、破损理赔、退件改址组织成可检索知识。
 
 本仓库是公开开发版本。物流资料、FAQ 与评测问题均为自建合成样例，不代表真实承运商政策；没有接入真实运单、退款或赔付系统，也没有附带生产效果数据。
@@ -60,3 +65,7 @@ python scripts/quality/check_evaluation_gate.py --report reports/evaluation/logi
 上述隔离单元测试与物流场景配置测试共 22 项通过。完整测试收集在当前机器缺少 `python-docx` 和 `pymilvus` 时失败；意图模型相关测试需要未随仓库分发的本地权重。全套测试、物流召回率和生产服务仍待完整环境验证。
 
 `.env`、模型、数据库卷、日志和生成报告不提交。继承的课程工具及 `VERSIONING.md` / `V1_RELEASE_MANIFEST.json` 描述原通用平台的资料结构；相关课程文档、数据包与历史验收产物未包含，不能据此推断本仓库已经通过该平台的发布验收。
+
+## 许可协议
+
+本项目基于 [MIT License](LICENSE) 发布，版权归 gxc02529-jpg 所有。
