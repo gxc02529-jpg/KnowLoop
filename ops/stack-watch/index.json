@@ -1,0 +1,357 @@
+{
+ "repo": "KnowLoop",
+ "manifest": "requirements.txt",
+ "manifest_path": "requirements.txt",
+ "date": "2026-09-21",
+ "generated_at": "2026-09-21T06:53:54Z",
+ "packages_total": 46,
+ "audit_ok": true,
+ "findings": [
+  {
+   "package": "protobuf",
+   "spec": "==5.29.5",
+   "floor": "5.29.5",
+   "count": 2,
+   "severity": "HIGH",
+   "rank": 80.0,
+   "clear_version": "6.33.5",
+   "advisories": [
+    {
+     "id": "GHSA-7gcm-g887-7qv7",
+     "aliases": [
+      "CVE-2026-0994"
+     ],
+     "summary": "protobuf affected by a JSON recursion depth bypass"
+    },
+    {
+     "id": "PYSEC-2026-1805",
+     "aliases": [
+      "CVE-2026-0994"
+     ],
+     "summary": "protobuf affected by a JSON recursion depth bypass"
+    }
+   ]
+  },
+  {
+   "package": "pymdown-extensions",
+   "spec": "==10.14",
+   "floor": "10.14",
+   "count": 8,
+   "severity": "HIGH",
+   "rank": 80.0,
+   "clear_version": "11.0.1",
+   "advisories": [
+    {
+     "id": "GHSA-62q4-447f-wv8h",
+     "aliases": [
+      "CVE-2026-46338"
+     ],
+     "summary": "Regression in pymdownx.snippets reintroduces sibling-prefix path traversal bypass despite restrict_base_path"
+    },
+    {
+     "id": "GHSA-9xwg-3r6f-jcx2",
+     "aliases": [
+      "CVE-2026-61632"
+     ],
+     "summary": "PyMdown Extensions: Path traversal in the b64 extension lets <img src> read files outside base_path"
+    },
+    {
+     "id": "GHSA-gm37-52c6-37mw",
+     "aliases": [
+      "CVE-2026-67422"
+     ],
+     "summary": "pymdown-extensions: exponential-backtracking ReDoS in caret, tilde, betterem, and magiclink inline processors"
+    },
+    {
+     "id": "GHSA-r6h4-mm7h-8pmq",
+     "aliases": [
+      "CVE-2025-68142"
+     ],
+     "summary": "PyMdown Extensions has a ReDOS bug in its Figure Capture extension"
+    },
+    {
+     "id": "PYSEC-2026-1825",
+     "aliases": [
+      "CVE-2025-68142"
+     ],
+     "summary": "PyMdown Extensions has a ReDOS bug in its Figure Capture extension"
+    },
+    {
+     "id": "PYSEC-2026-2999",
+     "aliases": [
+      "CVE-2026-46338"
+     ],
+     "summary": "Regression in pymdownx.snippets reintroduces sibling-prefix path traversal bypass despite restrict_base_path"
+    },
+    {
+     "id": "PYSEC-2026-3609",
+     "aliases": [
+      "CVE-2026-61632"
+     ],
+     "summary": "PyMdown Extensions: Path traversal in the b64 extension lets <img src> read files outside base_path"
+    },
+    {
+     "id": "PYSEC-2026-3654",
+     "aliases": [
+      "CVE-2026-67422"
+     ],
+     "summary": "pymdown-extensions: exponential-backtracking ReDoS in caret, tilde, betterem, and magiclink inline processors"
+    }
+   ]
+  },
+  {
+   "package": "transformers",
+   "spec": "==4.57.6",
+   "floor": "4.57.6",
+   "count": 9,
+   "severity": "HIGH",
+   "rank": 80.0,
+   "clear_version": "5.10.0",
+   "advisories": [
+    {
+     "id": "GHSA-29pf-2h5f-8g72",
+     "aliases": [
+      "CVE-2026-4372"
+     ],
+     "summary": "HuggingFace transformers vulnerable to remote code execution"
+    },
+    {
+     "id": "GHSA-69w3-r845-3855",
+     "aliases": [
+      "CVE-2026-1839"
+     ],
+     "summary": "HuggingFace Transformers allows for arbitrary code execution in the `Trainer` class"
+    },
+    {
+     "id": "GHSA-fgcw-684q-jj6r",
+     "aliases": [
+      "CVE-2026-5241"
+     ],
+     "summary": "huggingface/transformers: Arbitrary Code Execution During Model Initialization in the LightGlue Model Loading Path"
+    },
+    {
+     "id": "GHSA-xrqw-3rrv-vx5w",
+     "aliases": [
+      "CVE-2026-9856"
+     ],
+     "summary": "Transformers save_pretrained path traversal allows arbitrary file writes through chat template names"
+    },
+    {
+     "id": "PYSEC-2025-217",
+     "aliases": [
+      "CVE-2025-14929"
+     ],
+     "summary": ""
+    },
+    {
+     "id": "PYSEC-2026-2288",
+     "aliases": [
+      "CVE-2026-1839"
+     ],
+     "summary": ""
+    },
+    {
+     "id": "PYSEC-2026-2289",
+     "aliases": [
+      "CVE-2026-4372"
+     ],
+     "summary": ""
+    },
+    {
+     "id": "PYSEC-2026-2290",
+     "aliases": [
+      "CVE-2026-5241"
+     ],
+     "summary": ""
+    },
+    {
+     "id": "PYSEC-2026-3929",
+     "aliases": [
+      "CVE-2026-9856"
+     ],
+     "summary": "Transformers save_pretrained path traversal allows arbitrary file writes through chat template names"
+    }
+   ]
+  },
+  {
+   "package": "pytest",
+   "spec": "==8.4.2",
+   "floor": "8.4.2",
+   "count": 2,
+   "severity": "MODERATE",
+   "rank": 60.0,
+   "clear_version": "9.0.3",
+   "advisories": [
+    {
+     "id": "GHSA-6w46-j5rx-g56g",
+     "aliases": [
+      "CVE-2025-71176"
+     ],
+     "summary": "pytest has vulnerable tmpdir handling"
+    },
+    {
+     "id": "PYSEC-2026-1845",
+     "aliases": [
+      "CVE-2025-71176"
+     ],
+     "summary": "pytest has vulnerable tmpdir handling"
+    }
+   ]
+  },
+  {
+   "package": "torch",
+   "spec": "==2.7.1+cpu",
+   "floor": "2.7.1+cpu",
+   "count": 10,
+   "severity": "MODERATE",
+   "rank": 60.0,
+   "clear_version": "2.13.0",
+   "advisories": [
+    {
+     "id": "GHSA-887c-mr87-cxwp",
+     "aliases": [
+      "CVE-2025-3730"
+     ],
+     "summary": "PyTorch Improper Resource Shutdown or Release vulnerability"
+    },
+    {
+     "id": "GHSA-qfhq-4f3w-5fph",
+     "aliases": [
+      "CVE-2025-3001"
+     ],
+     "summary": "PyTorch is vulnerable to memory corruption through its torch.lstm_cell function"
+    },
+    {
+     "id": "GHSA-rrmf-rvhw-rf47",
+     "aliases": [
+      "CVE-2025-3000"
+     ],
+     "summary": "PyTorch is vulnerable to memory corruption through its torch.jit.script function"
+    },
+    {
+     "id": "GHSA-vgrw-7cvw-pwgx",
+     "aliases": [
+      "CVE-2025-2999"
+     ],
+     "summary": "PyTorch is vulnerable to memory corruption through its unpack_sequence function"
+    },
+    {
+     "id": "PYSEC-2025-203",
+     "aliases": [
+      "CVE-2025-55551"
+     ],
+     "summary": ""
+    },
+    {
+     "id": "PYSEC-2025-204",
+     "aliases": [
+      "CVE-2025-55552"
+     ],
+     "summary": ""
+    },
+    {
+     "id": "PYSEC-2025-206",
+     "aliases": [
+      "CVE-2025-55554"
+     ],
+     "summary": ""
+    },
+    {
+     "id": "PYSEC-2026-139",
+     "aliases": [
+      "CVE-2026-4538"
+     ],
+     "summary": ""
+    },
+    {
+     "id": "PYSEC-2026-1970",
+     "aliases": [
+      "CVE-2025-3730"
+     ],
+     "summary": "PyTorch Improper Resource Shutdown or Release vulnerability"
+    },
+    {
+     "id": "PYSEC-2026-2286",
+     "aliases": [
+      "CVE-2026-24747"
+     ],
+     "summary": ""
+    }
+   ]
+  },
+  {
+   "package": "ragas",
+   "spec": "==0.3.6",
+   "floor": "0.3.6",
+   "count": 2,
+   "severity": "LOW",
+   "rank": 20.0,
+   "clear_version": null,
+   "advisories": [
+    {
+     "id": "GHSA-95ww-475f-pr4f",
+     "aliases": [
+      "CVE-2026-6587"
+     ],
+     "summary": "RAGAS has SSRF via Multi-Modal Faithfulness Collections Module"
+    },
+    {
+     "id": "PYSEC-2026-3046",
+     "aliases": [
+      "CVE-2026-6587"
+     ],
+     "summary": "RAGAS has SSRF via Multi-Modal Faithfulness Collections Module"
+    }
+   ]
+  }
+ ],
+ "unknown": [],
+ "drift": [],
+ "history": [
+  {
+   "date": "2026-09-21",
+   "packages": 46,
+   "affected": 6,
+   "high": 3,
+   "drift": 0,
+   "finding_ids": [
+    "protobuf::GHSA-7gcm-g887-7qv7",
+    "protobuf::PYSEC-2026-1805",
+    "pymdown-extensions::GHSA-62q4-447f-wv8h",
+    "pymdown-extensions::GHSA-9xwg-3r6f-jcx2",
+    "pymdown-extensions::GHSA-gm37-52c6-37mw",
+    "pymdown-extensions::GHSA-r6h4-mm7h-8pmq",
+    "pymdown-extensions::PYSEC-2026-1825",
+    "pymdown-extensions::PYSEC-2026-2999",
+    "pymdown-extensions::PYSEC-2026-3609",
+    "pymdown-extensions::PYSEC-2026-3654",
+    "pytest::GHSA-6w46-j5rx-g56g",
+    "pytest::PYSEC-2026-1845",
+    "ragas::GHSA-95ww-475f-pr4f",
+    "ragas::PYSEC-2026-3046",
+    "torch::GHSA-887c-mr87-cxwp",
+    "torch::GHSA-qfhq-4f3w-5fph",
+    "torch::GHSA-rrmf-rvhw-rf47",
+    "torch::GHSA-vgrw-7cvw-pwgx",
+    "torch::PYSEC-2025-203",
+    "torch::PYSEC-2025-204",
+    "torch::PYSEC-2025-206",
+    "torch::PYSEC-2026-139",
+    "torch::PYSEC-2026-1970",
+    "torch::PYSEC-2026-2286",
+    "transformers::GHSA-29pf-2h5f-8g72",
+    "transformers::GHSA-69w3-r845-3855",
+    "transformers::GHSA-fgcw-684q-jj6r",
+    "transformers::GHSA-xrqw-3rrv-vx5w",
+    "transformers::PYSEC-2025-217",
+    "transformers::PYSEC-2026-2288",
+    "transformers::PYSEC-2026-2289",
+    "transformers::PYSEC-2026-2290",
+    "transformers::PYSEC-2026-3929"
+   ],
+   "audit_ok": true
+  }
+ ],
+ "new_findings": [],
+ "cleared_findings": []
+}
