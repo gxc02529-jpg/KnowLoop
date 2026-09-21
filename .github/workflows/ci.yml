@@ -70,6 +70,15 @@ jobs:
           python -c "import json; r = json.load(open('pip-report.json'));
           print('resolved distributions:', len(r['install']))"
 
+      # 解析通过只说明「能装上」，不说明「装上之后 import 不炸」。跨版本升级真正
+      # 会踩的坑是符号被移除、子模块被重命名，解析阶段看不出来，故补运行时校验。
+      # pin 直接从 requirements.txt 抽出，确保被测版本与仓库声明版本不漂移。
+      - name: Install core dependencies at declared pins
+        run: python -m pip install $(python scripts/check_imports.py --emit-pins)
+
+      - name: Runtime import smoke test
+        run: python scripts/check_imports.py
+
       # 漏洞扫描先以报告形式接入，不阻断构建；基线清零后可改为 --fail-on HIGH 作为卡口。
       - name: Audit pinned dependencies against OSV
         continue-on-error: true
