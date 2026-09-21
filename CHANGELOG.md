@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-09-21
+
 ### Added
 
 - MIT license, `.editorconfig`, and Dependabot configuration.
@@ -18,11 +20,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   CI installs a curated dependency subset rather than `requirements.txt`, so an
   automated dependency bump would always look green while never being actually
   exercised. `requirements.txt` is also the pinned dependency set behind the
-  frozen v1.0.11 release evidence, and semantic versioning is unreliable here
-  (`torch` 2.7.1 to 2.14.0 and `docling` 2.106.0 to 2.128.0 are both minor
-  bumps). Dependency upgrades go through a deliberate migration with the release
-  gates re-run, following [VERSIONING.md](VERSIONING.md). `github-actions`
-  updates stay automated because CI exercises the upgraded actions directly.
+  released version, and semantic versioning is unreliable here (`torch` 2.7.1 to
+  2.14.0 and `docling` 2.106.0 to 2.128.0 are both minor bumps). Dependency
+  upgrades go through a deliberate migration with the regression suite re-run,
+  following [VERSIONING.md](VERSIONING.md). `github-actions` updates stay
+  automated because CI exercises the upgraded actions directly.
 - Bumped `actions/checkout` to v7 and `actions/setup-python` to v7.
 - CI now cancels superseded runs before starting a new one, and byte-compiles
   sources before running the tests.

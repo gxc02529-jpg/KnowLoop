@@ -63,7 +63,7 @@ python scripts/quality/check_evaluation_gate.py --report reports/evaluation/logi
 
 上述隔离单元测试与物流场景配置测试共 22 项通过。完整测试收集在当前机器缺少 `python-docx` 和 `pymilvus` 时失败；意图模型相关测试需要未随仓库分发的本地权重。全套测试、物流召回率和生产服务仍待完整环境验证。
 
-`.env`、模型、数据库卷、日志和生成报告不提交。继承的课程工具及 `VERSIONING.md` / `V1_RELEASE_MANIFEST.json` 描述原通用平台的资料结构；相关课程文档、数据包与历史验收产物未包含，不能据此推断本仓库已经通过该平台的发布验收。
+`.env`、模型、数据库卷、日志和生成报告不提交。版本与发布规则见 [VERSIONING.md](VERSIONING.md)，该文件只描述本仓库。
 
 ## 许可协议
 
