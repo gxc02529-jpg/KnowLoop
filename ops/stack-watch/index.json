@@ -2,8 +2,8 @@
  "repo": "KnowLoop",
  "manifest": "requirements.txt",
  "manifest_path": "requirements.txt",
- "date": "2026-10-01",
- "generated_at": "2026-10-01T07:36:30Z",
+ "date": "2026-10-02",
+ "generated_at": "2026-10-02T07:23:41Z",
  "packages_total": 46,
  "audit_ok": true,
  "findings": [
@@ -11,13 +11,20 @@
    "package": "sentence-transformers",
    "spec": "==4.1.0",
    "floor": "4.1.0",
-   "count": 1,
+   "count": 2,
    "severity": "CRITICAL",
    "rank": 100.0,
    "clear_version": "5.6.0",
    "advisories": [
     {
      "id": "GHSA-jhr6-gm9c-rqjv",
+     "aliases": [
+      "CVE-2026-68770"
+     ],
+     "summary": "sentence-transformers local model loading bypasses trust_remote_code and executes custom Python"
+    },
+    {
+     "id": "PYSEC-2026-4164",
      "aliases": [
       "CVE-2026-68770"
      ],
@@ -118,10 +125,133 @@
    ]
   },
   {
+   "package": "pypdf",
+   "spec": "==6.16.1",
+   "floor": "6.16.1",
+   "count": 16,
+   "severity": "HIGH",
+   "rank": 80.0,
+   "clear_version": "6.19.0",
+   "advisories": [
+    {
+     "id": "GHSA-5jq2-8x83-x246",
+     "aliases": [
+      "CVE-2026-102994"
+     ],
+     "summary": "pypdf: Possible long runtimes/large memory usage when parsing indirect objects"
+    },
+    {
+     "id": "GHSA-fp3h-c4fm-7vvf",
+     "aliases": [
+      "CVE-2026-102995"
+     ],
+     "summary": "pypdf: Possible large memory usage for large /ToUnicode streams (Follow-up 2)"
+    },
+    {
+     "id": "GHSA-g9cg-prrw-2r8q",
+     "aliases": [
+      "CVE-2026-102996"
+     ],
+     "summary": "pypdf: Possible large memory usage when parsing font data"
+    },
+    {
+     "id": "GHSA-jw7q-gvrg-4vj3",
+     "aliases": [
+      "CVE-2026-102997"
+     ],
+     "summary": "pypdf: Possible long runtimes for partially malformed FlateDecode streams (Follow-up)"
+    },
+    {
+     "id": "GHSA-php9-fj8v-98fj",
+     "aliases": [
+      "CVE-2026-102998"
+     ],
+     "summary": "pypdf: Possible long runtimes when generating appearance streams"
+    },
+    {
+     "id": "GHSA-qv6h-rv94-w285",
+     "aliases": [
+      "CVE-2026-102993"
+     ],
+     "summary": "pypdf: Possible large memory usage when retrieving Roman page labels"
+    },
+    {
+     "id": "GHSA-v247-6f48-mgcj",
+     "aliases": [
+      "CVE-2026-102999"
+     ],
+     "summary": "pypdf: Possible long runtimes with large amount of embedded files"
+    },
+    {
+     "id": "GHSA-w23x-9jrw-r45c",
+     "aliases": [
+      "CVE-2026-103000"
+     ],
+     "summary": "pypdf: Possible large memory usage when retrieving alphabetical page labels"
+    },
+    {
+     "id": "PYSEC-2026-4153",
+     "aliases": [
+      "CVE-2026-102994"
+     ],
+     "summary": "pypdf: Possible long runtimes/large memory usage when parsing indirect objects"
+    },
+    {
+     "id": "PYSEC-2026-4154",
+     "aliases": [
+      "CVE-2026-102995"
+     ],
+     "summary": "pypdf: Possible large memory usage for large /ToUnicode streams (Follow-up 2)"
+    },
+    {
+     "id": "PYSEC-2026-4155",
+     "aliases": [
+      "CVE-2026-102996"
+     ],
+     "summary": "pypdf: Possible large memory usage when parsing font data"
+    },
+    {
+     "id": "PYSEC-2026-4156",
+     "aliases": [
+      "CVE-2026-102997"
+     ],
+     "summary": "pypdf: Possible long runtimes for partially malformed FlateDecode streams (Follow-up)"
+    },
+    {
+     "id": "PYSEC-2026-4157",
+     "aliases": [
+      "CVE-2026-102998"
+     ],
+     "summary": "pypdf: Possible long runtimes when generating appearance streams"
+    },
+    {
+     "id": "PYSEC-2026-4158",
+     "aliases": [
+      "CVE-2026-102993"
+     ],
+     "summary": "pypdf: Possible large memory usage when retrieving Roman page labels"
+    },
+    {
+     "id": "PYSEC-2026-4159",
+     "aliases": [
+      "CVE-2026-102999"
+     ],
+     "summary": "pypdf: Possible long runtimes with large amount of embedded files"
+    },
+    {
+     "id": "PYSEC-2026-4160",
+     "aliases": [
+      "CVE-2026-103000"
+     ],
+     "summary": "pypdf: Possible large memory usage when retrieving alphabetical page labels"
+    }
+   ]
+  },
+  {
    "package": "transformers",
    "spec": "==4.57.6",
    "floor": "4.57.6",
-   "count": 10,
+   "count": 11,
    "severity": "HIGH",
    "rank": 80.0,
    "clear_version": "5.10.0",
@@ -195,6 +325,13 @@
       "CVE-2026-9856"
      ],
      "summary": "Transformers save_pretrained path traversal allows arbitrary file writes through chat template names"
+    },
+    {
+     "id": "PYSEC-2026-4174",
+     "aliases": [
+      "CVE-2026-80047"
+     ],
+     "summary": "Hugging Face Transformers downloads custom generation code before trust consent"
     }
    ]
   },
@@ -807,11 +944,92 @@
     "transformers::PYSEC-2026-3929"
    ],
    "audit_ok": true
+  },
+  {
+   "date": "2026-10-02",
+   "packages": 46,
+   "affected": 8,
+   "high": 5,
+   "drift": 0,
+   "finding_ids": [
+    "protobuf::GHSA-7gcm-g887-7qv7",
+    "protobuf::PYSEC-2026-1805",
+    "pymdown-extensions::GHSA-62q4-447f-wv8h",
+    "pymdown-extensions::GHSA-9xwg-3r6f-jcx2",
+    "pymdown-extensions::GHSA-gm37-52c6-37mw",
+    "pymdown-extensions::GHSA-r6h4-mm7h-8pmq",
+    "pymdown-extensions::PYSEC-2026-1825",
+    "pymdown-extensions::PYSEC-2026-2999",
+    "pymdown-extensions::PYSEC-2026-3609",
+    "pymdown-extensions::PYSEC-2026-3654",
+    "pypdf::GHSA-5jq2-8x83-x246",
+    "pypdf::GHSA-fp3h-c4fm-7vvf",
+    "pypdf::GHSA-g9cg-prrw-2r8q",
+    "pypdf::GHSA-jw7q-gvrg-4vj3",
+    "pypdf::GHSA-php9-fj8v-98fj",
+    "pypdf::GHSA-qv6h-rv94-w285",
+    "pypdf::GHSA-v247-6f48-mgcj",
+    "pypdf::GHSA-w23x-9jrw-r45c",
+    "pypdf::PYSEC-2026-4153",
+    "pypdf::PYSEC-2026-4154",
+    "pypdf::PYSEC-2026-4155",
+    "pypdf::PYSEC-2026-4156",
+    "pypdf::PYSEC-2026-4157",
+    "pypdf::PYSEC-2026-4158",
+    "pypdf::PYSEC-2026-4159",
+    "pypdf::PYSEC-2026-4160",
+    "pytest::GHSA-6w46-j5rx-g56g",
+    "pytest::PYSEC-2026-1845",
+    "ragas::GHSA-95ww-475f-pr4f",
+    "ragas::PYSEC-2026-3046",
+    "sentence-transformers::GHSA-jhr6-gm9c-rqjv",
+    "sentence-transformers::PYSEC-2026-4164",
+    "torch::GHSA-887c-mr87-cxwp",
+    "torch::GHSA-qfhq-4f3w-5fph",
+    "torch::GHSA-rrmf-rvhw-rf47",
+    "torch::GHSA-vgrw-7cvw-pwgx",
+    "torch::PYSEC-2025-203",
+    "torch::PYSEC-2025-204",
+    "torch::PYSEC-2025-206",
+    "torch::PYSEC-2026-139",
+    "torch::PYSEC-2026-1970",
+    "torch::PYSEC-2026-2286",
+    "transformers::GHSA-29pf-2h5f-8g72",
+    "transformers::GHSA-69w3-r845-3855",
+    "transformers::GHSA-fgcw-684q-jj6r",
+    "transformers::GHSA-x9r9-c232-4q39",
+    "transformers::GHSA-xrqw-3rrv-vx5w",
+    "transformers::PYSEC-2025-217",
+    "transformers::PYSEC-2026-2288",
+    "transformers::PYSEC-2026-2289",
+    "transformers::PYSEC-2026-2290",
+    "transformers::PYSEC-2026-3929",
+    "transformers::PYSEC-2026-4174"
+   ],
+   "audit_ok": true
   }
  ],
  "new_findings": [
+  "pypdf::GHSA-5jq2-8x83-x246",
+  "pypdf::GHSA-fp3h-c4fm-7vvf",
+  "pypdf::GHSA-g9cg-prrw-2r8q",
+  "pypdf::GHSA-jw7q-gvrg-4vj3",
+  "pypdf::GHSA-php9-fj8v-98fj",
+  "pypdf::GHSA-qv6h-rv94-w285",
+  "pypdf::GHSA-v247-6f48-mgcj",
+  "pypdf::GHSA-w23x-9jrw-r45c",
+  "pypdf::PYSEC-2026-4153",
+  "pypdf::PYSEC-2026-4154",
+  "pypdf::PYSEC-2026-4155",
+  "pypdf::PYSEC-2026-4156",
+  "pypdf::PYSEC-2026-4157",
+  "pypdf::PYSEC-2026-4158",
+  "pypdf::PYSEC-2026-4159",
+  "pypdf::PYSEC-2026-4160",
   "sentence-transformers::GHSA-jhr6-gm9c-rqjv",
-  "transformers::GHSA-x9r9-c232-4q39"
+  "sentence-transformers::PYSEC-2026-4164",
+  "transformers::GHSA-x9r9-c232-4q39",
+  "transformers::PYSEC-2026-4174"
  ],
  "cleared_findings": []
 }
